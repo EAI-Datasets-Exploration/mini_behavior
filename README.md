@@ -15,24 +15,49 @@ The tasks are instantiated in simulated household environments.
 [8/10/2024] 
 - Mini-BEHAVIOR now supports gymnasium API at the [gymnasium](https://github.com/StanfordVL/mini_behavior/tree/gymnasium) branch. 
 
-### Environment Setup
-* Install gym-mingrid v1.0.3: 
+### Environment Setup - Selma Edited This
+
+* create conda environment:
 ```
-pip install gym-minigrid==1.0.3
+$ conda create -n "minibehavior" python=3.10
 ```
-* Install gym v0.21.0: 
 ```
-pip install setuptools==66.0.0
-pip install wheel==0.38.4
-pip install gym==0.21.0
+$ conda activate minibehavior
 ```
-* (Optional) Install stable-baselines3: 
+* Install specific tools because other versions break OpenAI's gym package:
+
 ```
-pip install stable-baselines3==1.6.2
+$ pip install setuptools==65.5.0 pip==21
 ```
+```
+$ pip install wheel==0.38.0
+```
+
+* install openai's gym:
+```
+$ pip install gym==0.21.0
+```
+
+* install mini-gym:
+```
+$ pip install gym-minigrid==1.0.3
+```
+
+* clone mini_behavior repo:
+```
+$ git clone https://github.com/StanfordVL/mini_behavior.git
+```
+```
+$ cd mini_behavior
+```
+
 * Install mini-behavior: 
 ```
 pip install -e .
+```
+* Test Installation:
+```
+$ python manual_control.py
 ```
 
 ### Run Code 
